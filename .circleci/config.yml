@@ -12,7 +12,7 @@ jobs:
           command: |
             exit 4
       - run: echo this is after a failed
-          when: always
+          when: on_fail
       
 workflows:
   test:
