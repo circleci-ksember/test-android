@@ -9,10 +9,15 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Run commands
           command: |
-            exit 4
-      - run: echo this is after a failed
-          when: on_fail
+              echo "I will exit fail status"
+              exit 4
+      - run:
+          name: Run on fail status
+          command: |
+              echo "I am result of above failed job"
+          when: always
       
 workflows:
   test:
