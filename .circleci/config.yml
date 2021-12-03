@@ -8,7 +8,9 @@ jobs:
       resource-class: large
     steps:
       - checkout
-      - run: echo "This is working"
+      - run:
+          command: |
+            exit 4
       
 workflows:
   test:
