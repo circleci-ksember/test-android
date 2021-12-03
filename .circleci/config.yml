@@ -11,6 +11,8 @@ jobs:
       - run:
           command: |
             exit 4
+      - run: echo this is after a failed
+          when: always
       
 workflows:
   test:
