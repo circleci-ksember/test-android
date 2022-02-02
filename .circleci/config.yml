@@ -1,20 +1,19 @@
 version: '2.1'
-orbs:
-  android: circleci/android@1.0.3
+
 jobs:
   test:
-    executor:
-      name: android/android-machine
-      resource-class: large
+    docker:
+      - image: cimg/android:2022.01
     steps:
       - checkout
-      - run: echo "This is working"
+      - run: 
+          command: |
+            java -v
+            ruby --version
+            python3 --version
+            echo $JAVA_HOME
       
 workflows:
   test:
     jobs:
-      - test:
-          filters:
-            branches:
-              only:
-                - main
+      - test
