@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: 
           command: |
-            java -v
+            java -version
             ruby --version
             python3 --version
             echo $JAVA_HOME
