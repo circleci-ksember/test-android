@@ -6,10 +6,8 @@ jobs:
       - image: cimg/android:2022.01
     steps:
       - checkout
-      - name: pwd
-        run: pwd
-      - name: ls
-        run: ls
+      - run: pwd
+      - run: ls
       
 workflows:
   test:
