@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: pwd
       - run: ls
-      - run: cd $CIRCLE_WORKING_DIRECTORY
+      - run: echo $HOME
       - run: pwd
       
 workflows:
