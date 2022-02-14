@@ -1,14 +1,15 @@
 version: '2.1'
-orbs:
-  android: circleci/android@1.0.3
+
 jobs:
   test:
-    executor:
-      name: android/android-machine
-      resource-class: large
+    docker:
+      - image: cimg/android:2022.01
     steps:
       - checkout
-      - run: echo "This is working"
+      - name: pwd
+        run: pwd
+      - name: ls
+        run: ls
       
 workflows:
   test:
