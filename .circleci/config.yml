@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run: pwd
       - run: ls
+      - run: echo $CIRCLE_WORKING_DIRECTORY
       
 workflows:
   test:
